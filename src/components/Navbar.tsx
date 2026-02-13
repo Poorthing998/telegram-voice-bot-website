@@ -6,10 +6,10 @@ import { TELEGRAM_BOT_URL } from '@/lib/seo';
 
 const navLinks = [
   { label: 'Features', href: '/#features' },
-  { label: 'Demo', href: '/#demo' },
-  { label: 'Modes', href: '/#modes' },
+  { label: 'Use Cases', href: '/#demo' },
   { label: 'Pricing', href: '/#pricing' },
   { label: 'Voice to Text', href: '/voice-to-text' },
+  { label: 'Privacy', href: '/data-privacy' },
 ];
 
 export default function Navbar() {
@@ -90,7 +90,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex gap-3 mt-4">
-            <Link href="/download" className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 btn-secondary text-sm">
+            <Link href="/download" onClick={() => setMobileOpen(false)} className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 btn-secondary text-sm">
               Download
             </Link>
             <a

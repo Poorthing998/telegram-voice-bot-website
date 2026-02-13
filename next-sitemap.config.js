@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://typegone.com',
+  siteUrl: 'https://typegone.app',
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,
@@ -19,11 +19,30 @@ module.exports = {
     }
 
     // Main landing pages get high priority
-    if (path === '/voice-to-text' || path === '/compare') {
+    if (path === '/voice-to-text' || path === '/compare' || path === '/download') {
       return {
         loc: path,
         changefreq: 'weekly',
         priority: 0.9,
+        lastmod: new Date().toISOString(),
+      };
+    }
+
+    // Trust / legal pages — important for E-E-A-T
+    if (path === '/data-privacy') {
+      return {
+        loc: path,
+        changefreq: 'monthly',
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      };
+    }
+
+    if (path === '/privacy' || path === '/terms') {
+      return {
+        loc: path,
+        changefreq: 'monthly',
+        priority: 0.6,
         lastmod: new Date().toISOString(),
       };
     }
@@ -66,7 +85,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://typegone.com/sitemap.xml',
+      'https://typegone.app/sitemap.xml',
     ],
   },
 };

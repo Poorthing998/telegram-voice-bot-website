@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
 import JsonLd from '@/components/JsonLd';
-import { TELEGRAM_BOT_URL, generateBreadcrumbSchema } from '@/lib/seo';
+import { TELEGRAM_BOT_URL, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'AI Meeting Notes — Voice to Meeting Summary with Action Items',
@@ -11,6 +12,13 @@ export const metadata: Metadata = {
   keywords: ['meeting notes AI', 'voice meeting notes', 'meeting summary tool', 'AI meeting summary', 'voice to meeting notes', 'meeting action items'],
   alternates: { canonical: 'https://typegone.app/use-cases/meeting-notes' },
 };
+
+const faqs = [
+  { question: 'How does TypeGone create meeting notes from voice?', answer: 'After a meeting, speak your takeaways for 30-60 seconds. TypeGone transcribes, removes filler words, and structures the output into sections: topics discussed, key decisions, action items with owners, and follow-ups.' },
+  { question: 'Can TypeGone record an entire meeting?', answer: 'TypeGone is designed for post-meeting voice recaps, not live meeting recording. Speak your takeaways after the meeting and get structured notes in seconds. For live recording, dedicated tools like Otter.ai are better suited.' },
+  { question: 'What format do meeting notes come in?', answer: 'Meeting notes include: Topics Discussed (main themes), Key Decisions (what was agreed), Action Items (who does what, with deadlines if mentioned), and additional notes. All cleanly formatted and ready to share.' },
+  { question: 'Can I share meeting notes via email or Slack?', answer: 'Yes. Copy the formatted output and paste it into any app — email, Slack, Notion, Asana, Jira, or any project management tool. You can also reformat the same recording as an email to send directly to participants.' },
+];
 
 export default function MeetingNotesPage() {
   return (
@@ -20,6 +28,7 @@ export default function MeetingNotesPage() {
         { name: 'Use Cases', url: '/use-cases/meeting-notes' },
         { name: 'Meeting Notes', url: '/use-cases/meeting-notes' },
       ])} />
+      <JsonLd data={generateFAQSchema(faqs)} />
 
       <section className="max-w-6xl mx-auto px-6 pt-32 pb-16">
         <div className="max-w-3xl">
@@ -72,8 +81,17 @@ export default function MeetingNotesPage() {
             <p>
               Copy the output and paste it into Slack, email it to participants, or add it to your project management tool. Done in under a minute.
             </p>
+
+            <h2>Other Ways to Use TypeGone</h2>
+            <p>
+              Meeting notes are just one output. TypeGone can also turn your voice into <Link href="/use-cases/emails">professional emails</Link>, <Link href="/use-cases/notes">structured notes</Link>, to-do lists, and more. The <Link href="/download">desktop app</Link> lets you use global keyboard shortcuts to capture notes right after a meeting without switching apps.
+            </p>
           </div>
         </section>
+      </ScrollReveal>
+
+      <ScrollReveal className="mt-24">
+        <FAQSection faqs={faqs} title="Meeting Notes FAQ" />
       </ScrollReveal>
 
       <ScrollReveal>

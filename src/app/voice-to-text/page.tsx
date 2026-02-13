@@ -34,11 +34,11 @@ const faqs = [
   },
   {
     question: 'Can I use TypeGone for long voice recordings?',
-    answer: 'Yes. The Starter plan supports short recordings, while the Standard plan handles longer messages. The Pro plan ($10/250 messages) supports the longest voice recordings available.',
+    answer: 'Yes. All plans support voice messages, with the Pro plan ($10/600 messages) offering the longest maximum recording duration. Most users find that short, focused voice messages give the best formatted output.',
   },
   {
     question: 'How does TypeGone compare to other voice to text apps?',
-    answer: 'Unlike basic transcription tools, TypeGone doesn\'t just convert speech to text — it formats the output intelligently. It removes filler words, fixes grammar, and structures your speech as emails, summaries, notes, or action items. Most voice to text apps only give you raw transcription.',
+    answer: 'Unlike basic transcription tools, TypeGone doesn\'t just convert speech to text — it formats the output. It removes filler words, fixes grammar, and structures your speech as emails, summaries, notes, or action items. See our full comparison page for details.',
   },
   {
     question: 'Does voice to text work offline?',
@@ -47,6 +47,14 @@ const faqs = [
   {
     question: 'What file formats does TypeGone output?',
     answer: 'TypeGone outputs clean, formatted text that you can copy and paste anywhere — email clients, document editors, messaging apps, note-taking tools, or any other application.',
+  },
+  {
+    question: 'Is my voice data stored when using voice to text?',
+    answer: 'No. TypeGone operates under a zero data retention policy. Your voice is processed in real time and immediately deleted. It is never stored, logged, or used for AI model training.',
+  },
+  {
+    question: 'Can I use voice to text on my desktop computer?',
+    answer: 'Yes. The TypeGone desktop app (beta for Windows, macOS, Linux) gives you system-wide voice-to-text with global keyboard shortcuts. Press a hotkey in any application, speak, and formatted text appears at your cursor.',
   },
 ];
 
@@ -129,6 +137,26 @@ export default function VoiceToTextPage() {
             <h2>Voice to Text Speed: 5.3× Faster Than Typing</h2>
             <p>
               The average person types at 45 words per minute. Speaking naturally, you produce up to 240 words per minute. That&apos;s a 5.3× speed advantage. TypeGone lets you capture thoughts at the speed of speech while getting output quality that matches careful, edited typing.
+            </p>
+
+            <h2>Voice to Text Output Types</h2>
+            <p>
+              In Enhanced mode, TypeGone can format your voice into 7 different output types: <Link href="/use-cases/emails">Email</Link> (with tone selection), Summary, <Link href="/use-cases/notes">Notes</Link>, To-Do List, Chat Message, <Link href="/use-cases/meeting-notes">Meeting Notes</Link>, and General. After any transcription, you can tap &quot;Change Mode&quot; to reformat into a different type without re-recording.
+            </p>
+
+            <h2>Voice to Text on Desktop</h2>
+            <p>
+              The <Link href="/download">TypeGone desktop app</Link> brings voice-to-text to every application on your computer. Configure global keyboard shortcuts, each with a custom AI prompt. Press a hotkey in Gmail, Slack, Google Docs, or any app — speak — and polished text is pasted directly where your cursor is. No copy-paste, no window switching.
+            </p>
+
+            <h2>Voice to Text Privacy</h2>
+            <p>
+              TypeGone operates under a strict <Link href="/data-privacy">zero data retention</Link> policy. Your voice audio is processed in real time and immediately deleted — it is never stored, logged, or used for AI model training. We have zero-retention agreements with all third-party AI providers.
+            </p>
+
+            <h2>How TypeGone Compares to Other Voice to Text Tools</h2>
+            <p>
+              Most voice-to-text tools are transcription tools — they turn speech into words. TypeGone is a voice <em>formatting</em> tool — it turns speech into ready-to-use text. See our full <Link href="/compare">comparison with Otter.ai, Whisper, and built-in dictation tools</Link> to understand the difference.
             </p>
           </div>
         </section>

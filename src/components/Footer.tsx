@@ -19,18 +19,20 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Product — internal links help SEO */}
+          {/* Product */}
           <div>
             <h4 className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Product</h4>
             <ul className="flex flex-col gap-2.5 text-sm text-text-dim">
               <li><Link href="/#features" className="hover:text-text-muted transition-colors">Features</Link></li>
-              <li><Link href="/#pricing" className="hover:text-text-muted transition-colors">Pricing</Link></li>
               <li><Link href="/#modes" className="hover:text-text-muted transition-colors">Processing Modes</Link></li>
-              <li><Link href="/download" className="hover:text-text-muted transition-colors">Download Desktop App</Link></li>
+              <li><Link href="/#pricing" className="hover:text-text-muted transition-colors">Pricing</Link></li>
+              <li><Link href="/#desktop" className="hover:text-text-muted transition-colors">Desktop App</Link></li>
+              <li><Link href="/download" className="hover:text-text-muted transition-colors">Download</Link></li>
+              <li><Link href="/compare" className="hover:text-text-muted transition-colors">Compare</Link></li>
             </ul>
           </div>
 
-          {/* Use Cases — SEO landing pages */}
+          {/* Use Cases */}
           <div>
             <h4 className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Use Cases</h4>
             <ul className="flex flex-col gap-2.5 text-sm text-text-dim">
@@ -38,17 +40,17 @@ export default function Footer() {
               <li><Link href="/use-cases/emails" className="hover:text-text-muted transition-colors">Voice to Email</Link></li>
               <li><Link href="/use-cases/notes" className="hover:text-text-muted transition-colors">Voice Notes to Text</Link></li>
               <li><Link href="/use-cases/meeting-notes" className="hover:text-text-muted transition-colors">Meeting Notes</Link></li>
+              <li><a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-text-muted transition-colors">Telegram Bot</a></li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Legal & Trust */}
           <div>
-            <h4 className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Company</h4>
+            <h4 className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Trust &amp; Legal</h4>
             <ul className="flex flex-col gap-2.5 text-sm text-text-dim">
+              <li><Link href="/data-privacy" className="hover:text-text-muted transition-colors">Data Ownership &amp; Privacy</Link></li>
               <li><Link href="/privacy" className="hover:text-text-muted transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-text-muted transition-colors">Terms of Service</Link></li>
-              <li><a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-text-muted transition-colors">Telegram Bot</a></li>
-              <li><Link href="/compare" className="hover:text-text-muted transition-colors">Compare</Link></li>
             </ul>
           </div>
         </div>

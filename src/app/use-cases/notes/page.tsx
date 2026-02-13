@@ -1,9 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
+import FAQSection from '@/components/FAQSection';
 import CTASection from '@/components/CTASection';
 import JsonLd from '@/components/JsonLd';
-import { TELEGRAM_BOT_URL, generateBreadcrumbSchema } from '@/lib/seo';
+import { TELEGRAM_BOT_URL, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Voice Notes to Text — Convert Voice Memos to Organized Notes',
@@ -11,6 +12,13 @@ export const metadata: Metadata = {
   keywords: ['voice notes to text', 'voice memo to text', 'convert voice note', 'transcribe voice notes', 'voice note converter', 'voice memo transcription'],
   alternates: { canonical: 'https://typegone.app/use-cases/notes' },
 };
+
+const faqs = [
+  { question: 'Can TypeGone convert long voice notes to text?', answer: 'Yes. TypeGone handles voice messages from a few seconds to several minutes. Pro plan users get the longest recording support. The AI formats everything regardless of length.' },
+  { question: 'What format do voice notes come out in?', answer: 'In Enhanced mode, TypeGone detects the structure of your speech and formats accordingly — bullet points for lists, paragraphs for narratives, headers for multiple topics. You can also choose Notes, Summary, or To-Do List output types explicitly.' },
+  { question: 'Can I use voice notes to create to-do lists?', answer: 'Yes. Set the output type to "To-Do" and speak about what you need to do. TypeGone extracts every task, adds action verbs, and includes deadlines and priority tags if mentioned.' },
+  { question: 'Does TypeGone work with voice memos on my phone?', answer: 'TypeGone works through Telegram on any device — phone, tablet, or desktop. Send a voice message in the Telegram chat and get formatted text back in seconds. The desktop app adds system-wide hotkey support.' },
+];
 
 export default function VoiceNotesPage() {
   return (
@@ -20,6 +28,7 @@ export default function VoiceNotesPage() {
         { name: 'Use Cases', url: '/use-cases/notes' },
         { name: 'Voice Notes', url: '/use-cases/notes' },
       ])} />
+      <JsonLd data={generateFAQSchema(faqs)} />
 
       <section className="max-w-6xl mx-auto px-6 pt-32 pb-16">
         <div className="max-w-3xl">
@@ -72,8 +81,17 @@ export default function VoiceNotesPage() {
             <p>
               A regular transcription tool gives you every &quot;um,&quot; &quot;uh,&quot; and false start. TypeGone&apos;s Enhanced mode understands you&apos;re taking notes and formats accordingly — with bullet points, paragraphs, or numbered lists depending on the content. The output is ready to paste into Notion, Google Docs, or any other tool.
             </p>
+
+            <h2>Beyond Notes</h2>
+            <p>
+              The same voice recording can be reformatted into a <Link href="/use-cases/emails">professional email</Link>, <Link href="/use-cases/meeting-notes">meeting notes</Link>, a to-do list, or a summary — without re-recording. The <Link href="/download">TypeGone desktop app</Link> lets you capture notes anywhere on your computer with a single keyboard shortcut. Your voice data is always <Link href="/data-privacy">processed and deleted instantly</Link>.
+            </p>
           </div>
         </section>
+      </ScrollReveal>
+
+      <ScrollReveal className="mt-24">
+        <FAQSection faqs={faqs} title="Voice Notes FAQ" />
       </ScrollReveal>
 
       <ScrollReveal>

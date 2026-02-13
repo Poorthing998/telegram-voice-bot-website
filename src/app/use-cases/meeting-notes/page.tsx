@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'AI Meeting Notes — Voice to Meeting Summary with Action Items',
   description: 'Capture meeting takeaways by voice and get organized summaries with action items. TypeGone turns your post-meeting voice recap into structured notes in seconds.',
   keywords: ['meeting notes AI', 'voice meeting notes', 'meeting summary tool', 'AI meeting summary', 'voice to meeting notes', 'meeting action items'],
-  alternates: { canonical: 'https://typegone.app/use-cases/meeting-notes' },
+  alternates: { canonical: 'https://typegone.com/use-cases/meeting-notes' },
 };
 
 const faqs = [

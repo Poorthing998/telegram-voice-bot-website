@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'AI email from voice',
     'voice dictation email',
   ],
-  alternates: { canonical: 'https://typegone.app/use-cases/emails' },
+  alternates: { canonical: 'https://typegone.com/use-cases/emails' },
 };
 
 const faqs = [

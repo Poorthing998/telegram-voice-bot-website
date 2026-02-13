@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://typegone.app',
+  siteUrl: 'https://typegone.com',
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,
@@ -85,7 +85,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://typegone.app/sitemap.xml',
+      'https://typegone.com/sitemap.xml',
     ],
   },
 };

@@ -33,7 +33,7 @@ const nextConfig = {
   // Performance
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['typegone.app'],
+    domains: ['typegone.com'],
   },
 };
 

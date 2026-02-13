@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Download TypeGone Desktop App — Voice to Text Anywhere on Your Computer',
   description: 'Download the TypeGone desktop app for Windows, macOS, and Linux. System-wide voice to text with global keyboard shortcuts. Press a hotkey, speak, get polished text pasted anywhere.',
   keywords: ['voice to text desktop app', 'speech to text desktop', 'voice typing desktop', 'dictation app Windows', 'dictation app Mac', 'global shortcut voice to text'],
-  alternates: { canonical: 'https://typegone.app/download' },
+  alternates: { canonical: 'https://typegone.com/download' },
 };
 
 const DOWNLOAD_FAQS = [

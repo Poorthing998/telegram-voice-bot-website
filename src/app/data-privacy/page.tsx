@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Data Ownership & Privacy — Zero Data Retention Voice to Text',
   description: 'TypeGone never stores your voice recordings or transcriptions. Zero data retention, no model training, no data selling. Your voice is processed in real time and immediately deleted.',
   keywords: ['voice to text privacy', 'secure voice transcription', 'zero data retention', 'private speech to text', 'GDPR voice to text', 'voice data security', 'encrypted voice transcription'],
-  alternates: { canonical: 'https://typegone.app/data-privacy' },
+  alternates: { canonical: 'https://typegone.com/data-privacy' },
 };
 
 export default function DataPrivacyPage() {

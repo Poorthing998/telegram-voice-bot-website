@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'dictation to text',
   ],
   alternates: {
-    canonical: 'https://typegone.app/voice-to-text',
+    canonical: 'https://typegone.com/voice-to-text',
   },
 };
 

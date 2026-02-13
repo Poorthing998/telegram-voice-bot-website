@@ -1,0 +1,5 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "next build && next-sitemap",
+  "installCommand": "npm install"
+}

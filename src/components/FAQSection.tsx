@@ -29,7 +29,7 @@ export default function FAQSection({ faqs, title = 'Frequently Asked Questions' 
               className="w-full flex items-center justify-between p-6 text-left"
               aria-expanded={openIndex === i}
             >
-              <h3 className="font-display font-semibold text-base pr-4">{faq.question}</h3>
+              <h3 className="font-display font-semibold pr-4">{faq.question}</h3>
               <span
                 className="text-text-dim text-xl shrink-0 transition-transform duration-300"
                 style={{ transform: openIndex === i ? 'rotate(45deg)' : 'rotate(0)' }}

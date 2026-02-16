@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://typegone.app/sitemap.xml
+Sitemap: https://typegone.com/sitemap.xml

@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import { Bricolage_Grotesque, DM_Sans, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import JsonLd from '@/components/JsonLd';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackgroundAtmosphere from '@/components/BackgroundAtmosphere';
+import CookieBanner from '@/components/CookieBanner';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, generateOrganizationSchema, generateSoftwareAppSchema } from '@/lib/seo';
 
 // ═══ FONTS — loaded optimally by Next.js ═══
@@ -111,13 +113,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="icon"
           href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300E5A0'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='%23060B14' font-family='sans-serif'>T</text></svg>"
         />
+
+        {/* Google Consent Mode — defaults to denied until user accepts */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                wait_for_update: 500,
+              });
+              gtag('js', new Date());
+              gtag('config', 'G-6W1CMNMELM');
+            `,
+          }}
+        />
       </head>
 
       <body className="relative min-h-screen font-body">
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6W1CMNMELM"
+          strategy="afterInteractive"
+        />
+
         <BackgroundAtmosphere />
         <Navbar />
         <main className="relative z-10">{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

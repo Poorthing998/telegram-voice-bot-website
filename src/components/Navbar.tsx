@@ -16,22 +16,26 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-50 border-b border-white/[0.04] backdrop-blur-xl bg-base/80">
+    <nav className="fixed top-0 w-full z-50 border-b border-white/[0.04] backdrop-blur-xl bg-base/80" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-mint to-cyan flex items-center justify-center font-display font-extrabold text-base text-sm shadow-[0_0_24px_-4px_rgba(0,229,160,0.5)] group-hover:shadow-[0_0_36px_-4px_rgba(0,229,160,0.6)] transition-shadow duration-300">
+        <Link href="/" className="flex items-center gap-3 group" aria-label="TypeGone home">
+          <div
+            className="w-9 h-9 rounded-xl bg-gradient-to-br from-mint to-cyan flex items-center justify-center font-display font-extrabold text-base text-sm shadow-[0_0_24px_-4px_rgba(0,229,160,0.5)] group-hover:shadow-[0_0_36px_-4px_rgba(0,229,160,0.6)] transition-shadow duration-300"
+            aria-hidden="true"
+          >
             T
           </div>
           <span className="font-display font-bold text-lg tracking-tight">TypeGone</span>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-white/40">
+        <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-white/40" role="list">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
+              role="listitem"
               className="hover:text-white/90 transition-colors duration-300"
             >
               {link.label}
@@ -43,10 +47,16 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/download"
-            className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-[13px] font-medium text-white/50 border border-white/[0.08] rounded-xl hover:border-white/20 hover:text-white/80 transition-all duration-300"
+            className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-[13px] font-medium text-white/70 border border-white/[0.12] rounded-xl hover:border-white/30 hover:text-white transition-all duration-300"
+            aria-label="Download TypeGone desktop app (Beta)"
           >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
             Download
-            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/[0.06] text-white/30">
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan/[0.10] text-cyan/70 border border-cyan/20">
               Beta
             </span>
           </Link>
@@ -55,6 +65,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 btn-primary text-sm"
+            aria-label="Try TypeGone free on Telegram (opens in new tab)"
           >
             ▶ Try Free
           </a>
@@ -63,9 +74,11 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-colors"
-            aria-label="Toggle menu"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               {mobileOpen ? (
                 <path d="M18 6L6 18M6 6l12 12" />
               ) : (
@@ -78,11 +91,17 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="flex flex-col md:hidden border-t border-white/[0.04] bg-base/95 backdrop-blur-xl px-6 py-5 gap-1">
+        <div
+          id="mobile-menu"
+          className="flex flex-col md:hidden border-t border-white/[0.04] bg-base/95 backdrop-blur-xl px-6 py-5 gap-1"
+          role="menu"
+          aria-label="Mobile navigation"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
+              role="menuitem"
               onClick={() => setMobileOpen(false)}
               className="py-3 text-sm text-white/50 hover:text-white transition-colors"
             >
@@ -90,14 +109,27 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="flex gap-3 mt-4">
-            <Link href="/download" onClick={() => setMobileOpen(false)} className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 btn-secondary text-sm">
+            <Link
+              href="/download"
+              role="menuitem"
+              onClick={() => setMobileOpen(false)}
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 btn-secondary text-sm"
+              aria-label="Download TypeGone desktop app"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
               Download
             </Link>
             <a
               href={TELEGRAM_BOT_URL}
               target="_blank"
               rel="noopener noreferrer"
+              role="menuitem"
               className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 btn-primary text-sm"
+              aria-label="Try TypeGone free on Telegram (opens in new tab)"
             >
               Try Free
             </a>

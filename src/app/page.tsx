@@ -102,12 +102,29 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8 opacity-0 animate-fade-up" style={{ animationDelay: '0.6s' }}>
-                <a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 btn-primary text-base">
+                <a
+                  href={TELEGRAM_BOT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 btn-primary text-base"
+                  aria-label="Try TypeGone free on Telegram, no signup required (opens in new tab)"
+                >
                   Try Free on Telegram
+                  <span className="text-xs opacity-50 font-normal">— no signup</span>
                 </a>
-                <a href="#demo" className="inline-flex items-center gap-2 px-6 py-4 btn-secondary text-base">
-                  ▶ See it work
-                </a>
+                <Link
+                  href="/download"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 btn-secondary text-sm"
+                  aria-label="Download TypeGone desktop app (Beta)"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  </svg>
+                  Download Desktop
+                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/[0.06] text-white/30">Beta</span>
+                </Link>
               </div>
 
               <div className="flex items-center gap-5 text-xs text-text-dim opacity-0 animate-fade-up" style={{ animationDelay: '0.7s' }}>

@@ -6,6 +6,8 @@ import CTASection from '@/components/CTASection';
 import JsonLd from '@/components/JsonLd';
 import { generateBreadcrumbSchema, generateFAQSchema, TELEGRAM_BOT_URL } from '@/lib/seo';
 
+const WINDOWS_DOWNLOAD_URL = 'https://github.com/Poorthing998/telegram-voice-bot-website/releases/download/v1.0.0/TypeGone-Setup-1.0.0.exe';
+
 export const metadata: Metadata = {
   title: 'Download TypeGone Desktop App — Voice to Text Anywhere on Your Computer',
   description: 'Download the TypeGone desktop app for Windows, macOS, and Linux. System-wide voice to text with global keyboard shortcuts. Press a hotkey, speak, get polished text pasted anywhere.',
@@ -51,10 +53,13 @@ export default function DownloadPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
-            <a href="#" className="inline-flex items-center justify-center gap-3 px-8 py-4 btn-primary text-base">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-              Download for Windows
-            </a>
+            <div className="flex flex-col items-start gap-1.5">
+              <a href={WINDOWS_DOWNLOAD_URL} download="TypeGone-Setup-1.0.0.exe" className="inline-flex items-center justify-center gap-3 px-8 py-4 btn-primary text-base">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                Download for Windows
+              </a>
+              <span className="text-xs text-text-dim pl-1">v1.0.0 &middot; 75 MB &middot; Windows 10+</span>
+            </div>
             <a href="#" className="inline-flex items-center justify-center gap-3 px-8 py-4 btn-secondary text-base">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M2 12h20"/></svg>
               Download for macOS

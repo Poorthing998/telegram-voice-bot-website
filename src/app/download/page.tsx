@@ -7,6 +7,7 @@ import JsonLd from '@/components/JsonLd';
 import { generateBreadcrumbSchema, generateFAQSchema, TELEGRAM_BOT_URL } from '@/lib/seo';
 
 const WINDOWS_DOWNLOAD_URL = 'https://github.com/Poorthing998/telegram-voice-bot-website/releases/download/v1.0.0/TypeGone-Setup-1.0.0.exe';
+const MACOS_DOWNLOAD_URL = 'https://github.com/Poorthing998/telegram-voice-bot-desktopapp/releases/download/v1.0.0/TypeGone-1.0.0-arm64.dmg';
 
 export const metadata: Metadata = {
   title: 'Download TypeGone Desktop App — Voice to Text Anywhere on Your Computer',
@@ -60,10 +61,13 @@ export default function DownloadPage() {
               </a>
               <span className="text-xs text-text-dim pl-1">v1.0.0 &middot; 75 MB &middot; Windows 10+</span>
             </div>
-            <a href="#" className="inline-flex items-center justify-center gap-3 px-8 py-4 btn-secondary text-base">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M2 12h20"/></svg>
-              Download for macOS
-            </a>
+            <div className="flex flex-col items-start gap-1.5">
+              <a href={MACOS_DOWNLOAD_URL} download="TypeGone-1.0.0-arm64.dmg" className="inline-flex items-center justify-center gap-3 px-8 py-4 btn-secondary text-base">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M2 12h20"/></svg>
+                Download for macOS
+              </a>
+              <span className="text-xs text-text-dim pl-1">v1.0.0 &middot; Apple Silicon &middot; macOS 12+</span>
+            </div>
             <a href="#" className="inline-flex items-center justify-center gap-3 px-6 py-4 btn-secondary text-base">
               Linux
             </a>

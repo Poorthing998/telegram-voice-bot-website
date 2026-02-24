@@ -111,7 +111,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Favicon */}
         <link
           rel="icon"
-          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300E5A0'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='16' font-weight='bold' fill='%23060B14' font-family='sans-serif'>T</text></svg>"
+          type="image/png"
+          href="/favicon.png"
         />
 
         {/* Google Consent Mode — defaults to denied until user accepts */}

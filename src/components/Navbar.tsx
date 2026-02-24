@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { TELEGRAM_BOT_URL } from '@/lib/seo';
 
 const navLinks = [
@@ -20,13 +21,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group" aria-label="TypeGone home">
-          <div
-            className="w-9 h-9 rounded-xl bg-gradient-to-br from-mint to-cyan flex items-center justify-center font-display font-extrabold text-base text-sm shadow-[0_0_24px_-4px_rgba(0,229,160,0.5)] group-hover:shadow-[0_0_36px_-4px_rgba(0,229,160,0.6)] transition-shadow duration-300"
-            aria-hidden="true"
-          >
-            T
-          </div>
-          <span className="font-display font-bold text-lg tracking-tight">TypeGone</span>
+          <Image
+            src="/logo.png"
+            alt="TypeGone Logo"
+            width={160}
+            height={53}
+            className="w-auto h-9 object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Links */}
@@ -51,9 +53,9 @@ export default function Navbar() {
             aria-label="Download TypeGone desktop app (Beta)"
           >
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
             Download
             <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan/[0.10] text-cyan/70 border border-cyan/20">
@@ -117,9 +119,9 @@ export default function Navbar() {
               aria-label="Download TypeGone desktop app"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
               Download
             </Link>

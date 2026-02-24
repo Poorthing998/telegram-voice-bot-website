@@ -6,7 +6,7 @@ import CTASection from '@/components/CTASection';
 import JsonLd from '@/components/JsonLd';
 import { generateBreadcrumbSchema, generateFAQSchema, TELEGRAM_BOT_URL } from '@/lib/seo';
 
-const WINDOWS_DOWNLOAD_URL = 'https://github.com/Poorthing998/telegram-voice-bot-website/releases/download/v1.0.0/TypeGone-Setup-1.0.0.exe';
+const WINDOWS_DOWNLOAD_URL = 'https://github.com/Poorthing998/telegram-voice-bot-website/releases/download/v1.0.0/TypeGone-Setup-1.1.0.exe';
 const MACOS_DOWNLOAD_URL = 'https://github.com/Poorthing998/telegram-voice-bot-website/releases/download/v1.0.0/TypeGone-1.0.0-arm64.dmg';
 
 export const metadata: Metadata = {

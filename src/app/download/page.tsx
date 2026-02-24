@@ -68,7 +68,7 @@ export default function DownloadPage() {
                 </svg>
                 Download for Windows
               </a>
-              <span className="text-xs text-text-dim pl-1">v1.0.0 &middot; 79 MB &middot; Windows 10+</span>
+              <span className="text-xs text-text-dim pl-1">v1.1.0 &middot; 79 MB &middot; Windows 10+</span>
             </div>
 
             {/* macOS */}

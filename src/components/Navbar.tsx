@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Features', href: '/#features' },
   { label: 'Use Cases', href: '/#demo' },
   { label: 'Pricing', href: '/#pricing' },
+  { label: 'Mobile App', href: '/mobile' },
   { label: 'Voice to Text', href: '/voice-to-text' },
   { label: 'Privacy', href: '/data-privacy' },
 ];
@@ -56,7 +57,7 @@ export default function Navbar() {
           <Link
             href="/download"
             className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 text-[13px] font-medium text-white/80 border border-white/[0.14] rounded-xl hover:border-white/30 hover:text-white transition-all duration-300"
-            aria-label="Download TypeGone desktop app (Beta)"
+            aria-label="Download TypeGone for Android, iOS, Windows, macOS"
           >
             <svg
               width="13"
@@ -72,9 +73,6 @@ export default function Navbar() {
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
             Download
-            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan/[0.12] text-cyan/80 border border-cyan/30">
-              Beta
-            </span>
           </Link>
 
           <a
@@ -140,7 +138,7 @@ export default function Navbar() {
               role="menuitem"
               onClick={() => setMobileOpen(false)}
               className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 btn-secondary text-sm"
-              aria-label="Download TypeGone desktop app"
+              aria-label="Download TypeGone for Android, Desktop, and more"
             >
               <svg
                 width="14"

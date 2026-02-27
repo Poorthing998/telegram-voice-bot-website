@@ -18,7 +18,7 @@ module.exports = {
       };
     }
 
-    if (['/voice-to-text', '/compare', '/download'].includes(path)) {
+    if (['/voice-to-text', '/compare', '/download', '/mobile'].includes(path)) {
       return {
         loc: path,
         changefreq: 'weekly',

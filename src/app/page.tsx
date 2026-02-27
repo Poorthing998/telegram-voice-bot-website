@@ -7,20 +7,22 @@ import CTASection from '@/components/CTASection';
 import JsonLd from '@/components/JsonLd';
 import {
   TELEGRAM_BOT_URL,
+  ANDROID_DOWNLOAD_URL,
   HOMEPAGE_FAQS,
   generateHowToSchema,
   generateFAQSchema,
 } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'TypeGone — AI Voice to Text | Speak Messy, Get Perfect Text',
+  title: 'TypeGone — AI Voice to Text | Android Keyboard, Desktop App & Telegram Bot',
   description:
-    'TypeGone converts messy voice recordings into polished emails, summaries, notes, to-do lists, and meeting notes in seconds. AI-powered voice to text with smart formatting, filler word removal, custom shortcuts, and 9 language support. Try free on Telegram or download the desktop app.',
+    'TypeGone converts messy voice recordings into polished emails, summaries, notes, and meeting notes. AI-powered voice-to-text across every platform — Android keyboard, desktop app (Windows/macOS), and Telegram bot. Smart formatting, filler word removal, 9 languages. Try free.',
   keywords: [
     'voice to text', 'speech to text', 'AI voice transcription', 'voice typing', 'dictation app',
+    'AI voice keyboard Android', 'voice keyboard app', 'Android voice to text keyboard',
     'convert voice to text online', 'voice to email', 'voice notes to text', 'filler word remover',
     'speech to text app', 'voice to text desktop app', 'voice keyboard shortcut', 'custom voice commands',
-    'voice to text telegram', 'AI text formatter', 'voice memo converter',
+    'voice to text telegram', 'AI text formatter', 'voice memo converter', 'AI keyboard',
   ],
   alternates: { canonical: 'https://typegone.com/' },
 };
@@ -83,7 +85,7 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint opacity-50" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-mint" />
                 </span>
-                Desktop app with custom shortcuts now in beta
+                Android keyboard now available — v1.3.0
               </div>
 
               <h1 className="font-display font-extrabold tracking-tight mb-8 opacity-0 animate-fade-up" style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)', lineHeight: 1.02, animationDelay: '0.2s' }}>
@@ -98,7 +100,7 @@ export default function Home() {
                 AI voice to text that actually formats.
               </p>
               <p className="text-base text-text-dim max-w-lg mb-12 leading-relaxed opacity-0 animate-fade-up" style={{ animationDelay: '0.5s' }}>
-                TypeGone captures your chaotic voice, strips filler, nails the structure, and delivers polished <Link href="/use-cases/emails" className="text-mint/70 hover:text-mint underline underline-offset-2">emails</Link>, <Link href="/use-cases/notes" className="text-mint/70 hover:text-mint underline underline-offset-2">notes</Link>, <Link href="/use-cases/meeting-notes" className="text-mint/70 hover:text-mint underline underline-offset-2">meeting notes</Link>, to-do lists, and more — in seconds. On <a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="text-mint/70 hover:text-mint underline underline-offset-2">Telegram</a> or your <Link href="/download" className="text-mint/70 hover:text-mint underline underline-offset-2">desktop</Link>.
+                TypeGone captures your chaotic voice, strips filler, nails the structure, and delivers polished <Link href="/use-cases/emails" className="text-mint/70 hover:text-mint underline underline-offset-2">emails</Link>, <Link href="/use-cases/notes" className="text-mint/70 hover:text-mint underline underline-offset-2">notes</Link>, <Link href="/use-cases/meeting-notes" className="text-mint/70 hover:text-mint underline underline-offset-2">meeting notes</Link>, to-do lists, and more — in seconds. As an <Link href="/mobile" className="text-mint/70 hover:text-mint underline underline-offset-2">Android keyboard</Link>, <a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="text-mint/70 hover:text-mint underline underline-offset-2">Telegram bot</a>, or <Link href="/download" className="text-mint/70 hover:text-mint underline underline-offset-2">desktop app</Link>.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8 opacity-0 animate-fade-up" style={{ animationDelay: '0.6s' }}>
@@ -112,25 +114,29 @@ export default function Home() {
                   Try Free on Telegram
                   <span className="text-xs opacity-50 font-normal">— no signup</span>
                 </a>
-                <Link
-                  href="/download"
+                <a
+                  href={ANDROID_DOWNLOAD_URL}
+                  download="TypeGone.v1.3.0.apk"
                   className="inline-flex items-center gap-2 px-6 py-3.5 btn-secondary text-sm"
-                  aria-label="Download TypeGone desktop app (Beta)"
+                  aria-label="Download TypeGone for Android, version 1.3.0"
                 >
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0007.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 10.1867.3432 13.2339 0 16.9996h24c-.3435-3.7657-2.6892-6.8129-6.1185-7.678"/>
                   </svg>
-                  Download Desktop
-                  <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/[0.06] text-white/30">Beta</span>
-                </Link>
+                  Download for Android
+                </a>
               </div>
 
               <div className="flex items-center gap-5 text-xs text-text-dim opacity-0 animate-fade-up" style={{ animationDelay: '0.7s' }}>
                 <span className="flex items-center gap-1.5">✅ No signup</span>
                 <span className="flex items-center gap-1.5">✅ 3 free messages</span>
                 <span className="hidden sm:flex items-center gap-1.5">✅ <Link href="/data-privacy" className="hover:text-text-muted transition-colors underline underline-offset-2">Zero data retention</Link></span>
+              </div>
+
+              <div className="flex items-center gap-4 mt-4 text-xs text-text-dim opacity-0 animate-fade-up" style={{ animationDelay: '0.8s' }}>
+                <Link href="/mobile" className="hover:text-text-muted transition-colors underline underline-offset-2">Android keyboard</Link>
+                <span className="w-px h-3 bg-white/10" aria-hidden="true" />
+                <Link href="/download" className="hover:text-text-muted transition-colors underline underline-offset-2">All platforms →</Link>
               </div>
             </div>
 
@@ -229,7 +235,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="section-line mx-auto mb-6" />
             <h2 className="font-display font-extrabold text-3xl md:text-5xl mb-4 tracking-tight">Three steps. Zero friction.</h2>
-            <p className="text-text-dim text-base">Works in <a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="text-mint/60 hover:text-mint underline underline-offset-2">Telegram</a> now. <Link href="/download" className="text-mint/60 hover:text-mint underline underline-offset-2">Desktop app</Link> in beta.</p>
+            <p className="text-text-dim text-base">On <Link href="/mobile" className="text-mint/60 hover:text-mint underline underline-offset-2">Android</Link>, <a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="text-mint/60 hover:text-mint underline underline-offset-2">Telegram</a>, and <Link href="/download" className="text-mint/60 hover:text-mint underline underline-offset-2">desktop</Link>.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -387,6 +393,114 @@ export default function Home() {
                     <span className="text-mint/50">→</span> Hi Sarah, I wanted to follow up on our conversation about the project timeline...
                   </div>
                   <div className="mt-3 text-[10px] text-mint/40">✓ Pasted to Gmail</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* ═══ MOBILE APP — KEYBOARD ═══ */}
+      <ScrollReveal>
+        <section id="mobile" className="max-w-6xl mx-auto px-6 mt-16">
+          <div className="card p-10 md:p-14 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-mint/[0.04] rounded-full blur-[140px] pointer-events-none" aria-hidden="true" />
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-mint/20 text-mint text-xs font-semibold mb-6" style={{ background: 'rgba(0,229,160,0.06)' }}>
+                  <span className="relative flex h-2 w-2" aria-hidden="true">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-mint opacity-50" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-mint" />
+                  </span>
+                  Android Keyboard — Available Now
+                </div>
+                <h2 className="font-display font-extrabold text-2xl md:text-4xl mb-4 tracking-tight">
+                  AI voice keyboard.<br />Every app on your phone.
+                </h2>
+                <p className="text-text-muted text-sm leading-relaxed mb-8">
+                  TypeGone Mobile is a <strong className="text-text-primary">full custom Android keyboard</strong> with AI built in. Tap the mic, choose a mode — Tidy Speech, Write Email, Summarize, Translate — and polished text appears directly in whatever you are typing.
+                </p>
+                <div className="flex flex-col gap-4 mb-8">
+                  {[
+                    { label: 'Works in every app', desc: 'WhatsApp, Gmail, Slack, Instagram, Chrome — wherever you type, TypeGone types smarter.' },
+                    { label: '5 AI voice modes', desc: 'Tidy Speech, Write Email, AI Prompt, Summarize, Translate. Pick your mode, speak, done.' },
+                    { label: '8 keyboard layouts', desc: 'QWERTY, Persian, Arabic, French, German, Spanish, Russian, Portuguese. Swipe spacebar to switch.' },
+                    { label: 'Synced account', desc: 'Same account and credits as your Telegram bot and desktop app. One login, everywhere.' },
+                  ].map((item) => (
+                    <div key={item.label} className="flex gap-3 items-start">
+                      <span className="text-mint mt-0.5 shrink-0" aria-hidden="true">▸</span>
+                      <div>
+                        <span className="text-text-primary text-sm font-semibold">{item.label}</span>
+                        <p className="text-text-dim text-xs">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href={ANDROID_DOWNLOAD_URL}
+                    download="TypeGone.v1.3.0.apk"
+                    className="inline-flex items-center gap-2 px-5 py-3 btn-primary text-sm"
+                    aria-label="Download TypeGone for Android v1.3.0"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0007.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 10.1867.3432 13.2339 0 16.9996h24c-.3435-3.7657-2.6892-6.8129-6.1185-7.678"/>
+                    </svg>
+                    Download for Android
+                    <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/[0.06] text-white/30">v1.3.0</span>
+                  </a>
+                  <Link href="/mobile" className="inline-flex items-center gap-2 px-5 py-3 btn-secondary text-sm">
+                    Learn more →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Mobile keyboard mockup */}
+              <div className="flex items-center justify-center" aria-hidden="true">
+                <div className="w-full max-w-[240px]">
+                  <div className="relative mx-auto rounded-[2rem] border-2 border-white/10 bg-surface/60 overflow-hidden" style={{ aspectRatio: '9/16', maxHeight: '380px' }}>
+                    {/* App area */}
+                    <div className="absolute inset-x-0 top-0 h-[52%] p-4 flex flex-col gap-2">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-mint to-cyan flex items-center justify-center text-[10px] font-bold text-base">T</div>
+                        <span className="text-[9px] text-text-dim">TypeGone Keyboard</span>
+                      </div>
+                      <div className="flex-1 rounded-lg bg-white/[0.02] border border-white/[0.04] p-2">
+                        <div className="space-y-1.5">
+                          <div className="h-1.5 bg-white/[0.08] rounded-full w-full" />
+                          <div className="h-1.5 bg-white/[0.08] rounded-full w-5/6" />
+                          <div className="h-1.5 bg-mint/30 rounded-full w-full" />
+                          <div className="h-1.5 bg-mint/20 rounded-full w-4/5" />
+                        </div>
+                      </div>
+                    </div>
+                    {/* Keyboard */}
+                    <div className="absolute inset-x-0 bottom-0 h-[50%] bg-base-light/80 border-t border-white/[0.06] p-1.5">
+                      <div className="flex gap-1 mb-1.5 overflow-hidden">
+                        {['✨ Tidy', '📧 Email', '📋 Sum'].map((m, i) => (
+                          <div key={m} className={`px-1.5 py-0.5 rounded text-[6px] font-semibold whitespace-nowrap ${i === 0 ? 'bg-mint/20 text-mint' : 'bg-white/[0.04] text-text-dim'}`}>{m}</div>
+                        ))}
+                      </div>
+                      {[['Q','W','E','R','T','Y','U','I','O','P'], ['A','S','D','F','G','H','J','K','L'], ['Z','X','C','V','B','N','M']].map((row, ri) => (
+                        <div key={ri} className="flex justify-center gap-0.5 mb-0.5">
+                          {row.map((key) => (
+                            <div key={key} className="flex-1 max-w-[20px] py-1 rounded text-[6px] font-medium text-center bg-white/[0.06] text-text-dim">{key}</div>
+                          ))}
+                        </div>
+                      ))}
+                      <div className="flex items-center gap-0.5 mt-0.5">
+                        <div className="flex-1 py-1 rounded text-[6px] text-center text-text-dim/40 bg-white/[0.03]">space</div>
+                        <div className="w-6 h-6 rounded bg-gradient-to-br from-mint to-cyan flex items-center justify-center shadow-[0_0_8px_rgba(0,229,160,0.4)]">
+                          <svg width="8" height="8" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                          </svg>
+                        </div>
+                        <div className="py-1 px-1.5 rounded text-[6px] text-center text-text-dim/40 bg-white/[0.03]">⏎</div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-center text-[9px] text-text-dim mt-3">Works in any Android app</p>
                 </div>
               </div>
             </div>

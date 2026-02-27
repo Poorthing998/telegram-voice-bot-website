@@ -3,10 +3,16 @@ const nextConfig = {
   // SEO: Trailing slashes for consistent URLs
   trailingSlash: false,
 
-  // SEO: Redirect www to non-www (handle in Vercel/DNS too)
   async redirects() {
     return [
-      // Example: redirect old Voxly URLs if migrating
+      // Redirect www to non-www for consistent canonical URLs
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.typegone.com' }],
+        destination: 'https://typegone.com/:path*',
+        permanent: true,
+      },
+      // Redirect old Voxly URLs
       {
         source: '/voxly',
         destination: '/',

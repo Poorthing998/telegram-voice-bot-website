@@ -15,7 +15,7 @@ export default function Footer() {
               <span className="font-display font-bold text-sm text-text-dim">TypeGone</span>
             </Link>
             <p className="text-xs text-text-dim leading-relaxed">
-              AI-powered voice to text that understands context, formatting, and intent. Stop typing, start speaking.
+              AI-powered voice to text across every platform — Android keyboard, desktop app, and Telegram. Stop typing, start speaking.
             </p>
           </div>
 
@@ -26,6 +26,7 @@ export default function Footer() {
               <li><Link href="/#features" className="hover:text-text-muted transition-colors">Features</Link></li>
               <li><Link href="/#modes" className="hover:text-text-muted transition-colors">Processing Modes</Link></li>
               <li><Link href="/#pricing" className="hover:text-text-muted transition-colors">Pricing</Link></li>
+              <li><Link href="/mobile" className="hover:text-text-muted transition-colors">Mobile App (Android)</Link></li>
               <li><Link href="/#desktop" className="hover:text-text-muted transition-colors">Desktop App</Link></li>
               <li><Link href="/download" className="hover:text-text-muted transition-colors">Download</Link></li>
               <li><Link href="/compare" className="hover:text-text-muted transition-colors">Compare</Link></li>
@@ -40,6 +41,7 @@ export default function Footer() {
               <li><Link href="/use-cases/emails" className="hover:text-text-muted transition-colors">Voice to Email</Link></li>
               <li><Link href="/use-cases/notes" className="hover:text-text-muted transition-colors">Voice Notes to Text</Link></li>
               <li><Link href="/use-cases/meeting-notes" className="hover:text-text-muted transition-colors">Meeting Notes</Link></li>
+              <li><Link href="/mobile" className="hover:text-text-muted transition-colors">Android Keyboard</Link></li>
               <li><a href={TELEGRAM_BOT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-text-muted transition-colors">Telegram Bot</a></li>
             </ul>
           </div>

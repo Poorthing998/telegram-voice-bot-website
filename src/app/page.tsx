@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'speech to text app', 'voice to text desktop app', 'voice keyboard shortcut', 'custom voice commands',
     'voice to text telegram', 'AI text formatter', 'voice memo converter', 'AI keyboard',
   ],
-  alternates: { canonical: 'https://typegone.com/' },
+  alternates: { canonical: 'https://www.typegone.com/' },
 };
 
 const features = [

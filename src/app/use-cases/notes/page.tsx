@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Voice Notes to Text — Convert Voice Memos to Organized Notes',
   description: 'Turn rambling voice notes into clean, organized text. TypeGone transcribes, removes filler, and formats your voice memos into structured notes automatically.',
   keywords: ['voice notes to text', 'voice memo to text', 'convert voice note', 'transcribe voice notes', 'voice note converter', 'voice memo transcription'],
-  alternates: { canonical: 'https://typegone.com/use-cases/notes' },
+  alternates: { canonical: 'https://www.typegone.com/use-cases/notes' },
 };
 
 const faqs = [

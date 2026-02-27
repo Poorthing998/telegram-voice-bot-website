@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'TypeGone macOS',
     'AI voice to text all platforms',
   ],
-  alternates: { canonical: 'https://typegone.com/download' },
+  alternates: { canonical: 'https://www.typegone.com/download' },
 };
 
 const DOWNLOAD_FAQS = [

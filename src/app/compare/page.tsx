@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'TypeGone vs Otter, Whisper, Google & More — Voice to Text Comparison 2026',
   description: 'Compare TypeGone to Otter.ai, Whisper, Google Speech-to-Text, Apple Dictation, and other voice to text apps. See why TypeGone\'s AI formatting, filler removal, and instant output types set it apart.',
   keywords: ['best voice to text app 2026', 'otter.ai alternative', 'voice to text comparison', 'AI transcription comparison', 'whisper alternative', 'TypeGone vs Otter', 'speech to text app comparison'],
-  alternates: { canonical: 'https://typegone.com/compare' },
+  alternates: { canonical: 'https://www.typegone.com/compare' },
 };
 
 const COMPARE_FAQS = [

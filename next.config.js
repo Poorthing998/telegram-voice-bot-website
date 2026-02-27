@@ -5,13 +5,6 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Redirect www to non-www for consistent canonical URLs
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.typegone.com' }],
-        destination: 'https://typegone.com/:path*',
-        permanent: true,
-      },
       // Redirect old Voxly URLs
       {
         source: '/voxly',

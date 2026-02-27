@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     'voice keyboard app',
     'AI text input keyboard',
   ],
-  alternates: { canonical: 'https://typegone.com/mobile' },
+  alternates: { canonical: 'https://www.typegone.com/mobile' },
   openGraph: {
     title: 'TypeGone Mobile — AI Voice Keyboard for Android',
     description:
       'A custom Android keyboard that converts your voice to perfectly formatted text in any app. AI modes include Tidy Speech, Write Email, Summarize, and Translate.',
-    url: 'https://typegone.com/mobile',
+    url: 'https://www.typegone.com/mobile',
     type: 'website',
   },
 };

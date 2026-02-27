@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export const SITE_URL = 'https://typegone.com';
+export const SITE_URL = 'https://www.typegone.com';
 export const SITE_NAME = 'TypeGone';
 export const SITE_DESCRIPTION = 'Stop typing. Start speaking. TypeGone turns messy voice recordings into polished, professional text in seconds using AI. Emails, summaries, notes, to-do lists — just speak.';
 export const TELEGRAM_BOT_URL = 'https://t.me/easywriteai_bot';

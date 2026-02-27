@@ -6,7 +6,7 @@ import { generateBreadcrumbSchema, SUPPORT_EMAIL } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'TypeGone Privacy Policy — how we handle your data, voice recordings, and personal information. Zero data retention on all voice content.',
-  alternates: { canonical: 'https://typegone.com/privacy' },
+  alternates: { canonical: 'https://www.typegone.com/privacy' },
   robots: { index: true, follow: true },
 };
 

@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Use Cases', href: '/#demo' },
   { label: 'Pricing', href: '/#pricing' },
   { label: 'Mobile App', href: '/mobile' },
-  { label: 'Voice to Text', href: '/voice-to-text' },
+  { label: 'Voice Typing', href: '/voice-typing' },
   { label: 'Privacy', href: '/data-privacy' },
 ];
 

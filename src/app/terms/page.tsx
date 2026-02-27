@@ -6,7 +6,7 @@ import { generateBreadcrumbSchema, SUPPORT_EMAIL } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'TypeGone Terms of Service — the rules and conditions governing your use of TypeGone voice-to-text services across Telegram, desktop, and web.',
-  alternates: { canonical: 'https://typegone.com/terms' },
+  alternates: { canonical: 'https://www.typegone.com/terms' },
   robots: { index: true, follow: true },
 };
 

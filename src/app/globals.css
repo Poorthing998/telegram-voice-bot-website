@@ -60,7 +60,7 @@ body {
 /* ═══════════════════════════════════════ */
 
 .card {
-  background: linear-gradient(135deg, #0F1A2E 0%, rgba(15,26,46,0.6) 100%);
+  background: linear-gradient(135deg, #0D1525 0%, rgba(13,21,37,0.6) 100%);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 20px;
   transition: border-color 0.4s, transform 0.4s var(--ease), box-shadow 0.4s;
@@ -73,12 +73,12 @@ body {
 }
 
 .btn-primary {
-  background: #00E5A0;
+  background: linear-gradient(135deg, #00E5A0, #00D4FF);
   color: #060B14;
   font-weight: 700;
   border-radius: 14px;
   transition: all 0.3s var(--ease);
-  box-shadow: 0 4px 20px -4px rgba(0, 229, 160, 0.3);
+  box-shadow: 0 4px 20px -4px rgba(0, 229, 160, 0.35);
   position: relative;
   overflow: hidden;
 }
@@ -93,7 +93,7 @@ body {
 .btn-primary:hover::after { transform: translateX(100%); }
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 40px -4px rgba(0, 229, 160, 0.4);
+  box-shadow: 0 8px 40px -4px rgba(0, 212, 255, 0.35), 0 4px 20px -4px rgba(0, 229, 160, 0.35);
 }
 
 .btn-secondary {
@@ -135,7 +135,7 @@ body {
 
 /* Pricing popular */
 .pricing-pop {
-  background: linear-gradient(180deg, rgba(0,229,160,0.08) 0%, #0F1A2E 50%);
+  background: linear-gradient(180deg, rgba(0,229,160,0.10) 0%, #0D1525 50%);
   border-color: rgba(0, 229, 160, 0.25);
 }
 

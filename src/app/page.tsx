@@ -120,8 +120,10 @@ export default function Home() {
                   className="inline-flex items-center gap-2 px-6 py-3.5 btn-secondary text-sm"
                   aria-label="Download TypeGone for Android, version 1.3.0"
                 >
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0007.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 10.1867.3432 13.2339 0 16.9996h24c-.3435-3.7657-2.6892-6.8129-6.1185-7.678"/>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
                   Download for Android
                 </a>
@@ -244,9 +246,9 @@ export default function Home() {
               { num: '03', title: 'Done', desc: 'Copy your polished text and paste it anywhere. On desktop, text pastes directly where your cursor is. Tap "Change Mode" to reformat without re-recording.', icon: '📋' },
             ].map((step) => (
               <div key={step.num} className="card p-10 text-center relative overflow-hidden group">
-                <div className="absolute top-6 right-6 font-display font-extrabold text-7xl text-white/[0.03]">{step.num}</div>
+                <div className="absolute top-6 right-6 font-display font-extrabold text-7xl text-white/[0.07]">{step.num}</div>
                 <div className="text-4xl mb-6">{step.icon}</div>
-                <h3 className="font-display font-bold text-xl mb-3">{step.title}</h3>
+                <h3 className="font-display font-bold text-xl mb-3 text-text-primary">{step.title}</h3>
                 <p className="text-text-muted text-sm leading-relaxed">{step.desc}</p>
               </div>
             ))}
@@ -265,7 +267,7 @@ export default function Home() {
             {features.map((f) => (
               <div key={f.title} className="card p-8 group">
                 <div className="text-3xl mb-5">{f.icon}</div>
-                <h3 className="font-display font-bold text-lg mb-2">{f.title}</h3>
+                <h3 className="font-display font-bold text-lg mb-2 text-text-primary">{f.title}</h3>
                 <p className="text-text-muted text-sm leading-relaxed mb-3">{f.desc}</p>
                 {f.link && <Link href={f.link} className="text-xs text-mint/60 hover:text-mint transition-colors underline underline-offset-2">Learn more →</Link>}
               </div>
@@ -571,32 +573,32 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className="card p-7">
               <div className="text-2xl mb-4">👥</div>
-              <h3 className="font-display font-bold text-base mb-2">Group Transcription</h3>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">Group Transcription</h3>
               <p className="text-text-muted text-xs leading-relaxed">Add TypeGone to any group. Admins enable auto-transcription so every voice message is converted to text. Or reply to transcribe on demand.</p>
             </div>
             <div className="card p-7">
               <div className="text-2xl mb-4">🔄</div>
-              <h3 className="font-display font-bold text-base mb-2">Reformat Anytime</h3>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">Reformat Anytime</h3>
               <p className="text-text-muted text-xs leading-relaxed">Every transcription comes with action buttons: Copy, Retry, Change Mode, and Save. Reformat the same voice into any output without re-recording.</p>
             </div>
             <div className="card p-7">
               <div className="text-2xl mb-4">📜</div>
-              <h3 className="font-display font-bold text-base mb-2">History &amp; Stats</h3>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">History &amp; Stats</h3>
               <p className="text-text-muted text-xs leading-relaxed">Browse your full transcription history with pagination. Save favorites. View your stats — total messages, words processed, time saved.</p>
             </div>
             <div className="card p-7">
               <div className="text-2xl mb-4">⚡</div>
-              <h3 className="font-display font-bold text-base mb-2">Quick Mode Switch</h3>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">Quick Mode Switch</h3>
               <p className="text-text-muted text-xs leading-relaxed">Switch between Direct, Light, Enhanced, and AI Chat modes with a single tap. Your preference is remembered for the next recording.</p>
             </div>
             <div className="card p-7">
               <div className="text-2xl mb-4">🎁</div>
-              <h3 className="font-display font-bold text-base mb-2">Referral Program</h3>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">Referral Program</h3>
               <p className="text-text-muted text-xs leading-relaxed">Share your referral link. When a friend joins, you both get 10 free messages. No limits on how many friends you can invite.</p>
             </div>
             <div className="card p-7">
               <div className="text-2xl mb-4">🌍</div>
-              <h3 className="font-display font-bold text-base mb-2">Localized Interface</h3>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">Localized Interface</h3>
               <p className="text-text-muted text-xs leading-relaxed">The entire bot interface — buttons, menus, notifications, processing stages — is translated into all 9 supported languages.</p>
             </div>
           </div>
@@ -748,18 +750,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
             <div className="card p-7 group">
               <div className="text-2xl mb-3">✅</div>
-              <h3 className="font-display font-bold text-base mb-2">Voice to To-Do List</h3>
-              <p className="text-text-dim text-xs leading-relaxed">Rattle off everything you need to do. TypeGone extracts actionable tasks with verbs, deadlines, and priority tags.</p>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">Voice to To-Do List</h3>
+              <p className="text-text-muted text-xs leading-relaxed">Rattle off everything you need to do. TypeGone extracts actionable tasks with verbs, deadlines, and priority tags.</p>
             </div>
             <div className="card p-7 group">
               <div className="text-2xl mb-3">📋</div>
-              <h3 className="font-display font-bold text-base mb-2">Voice to Summary</h3>
-              <p className="text-text-dim text-xs leading-relaxed">Speak a long explanation and get a concise summary with key bullet points — perfect for recaps and briefs.</p>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">Voice to Summary</h3>
+              <p className="text-text-muted text-xs leading-relaxed">Speak a long explanation and get a concise summary with key bullet points — perfect for recaps and briefs.</p>
             </div>
             <div className="card p-7 group">
               <div className="text-2xl mb-3">💬</div>
-              <h3 className="font-display font-bold text-base mb-2">AI Chat by Voice</h3>
-              <p className="text-text-dim text-xs leading-relaxed">Ask questions by voice, get intelligent answers. Use TypeGone as a hands-free AI assistant for research, brainstorming, or quick lookups.</p>
+              <h3 className="font-display font-bold text-base mb-2 text-text-primary">AI Chat by Voice</h3>
+              <p className="text-text-muted text-xs leading-relaxed">Ask questions by voice, get intelligent answers. Use TypeGone as a hands-free AI assistant for research, brainstorming, or quick lookups.</p>
             </div>
           </div>
           <p className="text-center mt-8">

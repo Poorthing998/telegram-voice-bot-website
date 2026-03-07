@@ -10,6 +10,7 @@ module.exports = {
         },
         surface: {
           DEFAULT: '#0F1A2E',
+          elevated: '#0D1525',
           2: '#162240',
         },
         mint: {
@@ -23,7 +24,7 @@ module.exports = {
         lavender: '#8B6DFF',
         'text-primary': '#F0F4FF',
         'text-muted': '#8B9DC3',
-        'text-dim': '#4A5F8A',
+        'text-dim': '#8194B8',
       },
       fontFamily: {
         display: ['Bricolage Grotesque', 'sans-serif'],

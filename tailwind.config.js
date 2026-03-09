@@ -91,12 +91,12 @@ module.exports = {
           '50%,100%': { transform: 'translateX(400%) skewX(-15deg)' },
         },
         fadeUp: {
-          from: { opacity: '0', transform: 'translateY(40px)', filter: 'blur(6px)' },
-          to: { opacity: '1', transform: 'translateY(0)', filter: 'blur(0)' },
+          from: { opacity: '0', transform: 'translateY(40px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
         },
         slideInRight: {
-          from: { opacity: '0', transform: 'translateX(80px) scale(0.9)', filter: 'blur(12px)' },
-          to: { opacity: '1', transform: 'translateX(0) scale(1)', filter: 'blur(0)' },
+          from: { opacity: '0', transform: 'translateX(80px) scale(0.9)' },
+          to: { opacity: '1', transform: 'translateX(0) scale(1)' },
         },
       },
     },

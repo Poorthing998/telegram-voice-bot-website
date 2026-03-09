@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://typegone.com',
+  siteUrl: 'https://www.typegone.com',
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,

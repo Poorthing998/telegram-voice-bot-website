@@ -21,7 +21,7 @@ export default function Footer() {
 
           {/* Product */}
           <div>
-            <h4 className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Product</h4>
+            <p className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Product</p>
             <ul className="flex flex-col gap-2.5 text-sm text-text-dim">
               <li><Link href="/#features" className="hover:text-text-muted transition-colors">Features</Link></li>
               <li><Link href="/#modes" className="hover:text-text-muted transition-colors">Processing Modes</Link></li>
@@ -35,7 +35,7 @@ export default function Footer() {
 
           {/* Use Cases */}
           <div>
-            <h4 className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Use Cases</h4>
+            <p className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Use Cases</p>
             <ul className="flex flex-col gap-2.5 text-sm text-text-dim">
               <li><Link href="/voice-to-text" className="hover:text-text-muted transition-colors">Voice to Text</Link></li>
               <li><Link href="/use-cases/emails" className="hover:text-text-muted transition-colors">Voice to Email</Link></li>
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Legal & Trust */}
           <div>
-            <h4 className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Trust &amp; Legal</h4>
+            <p className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Trust &amp; Legal</p>
             <ul className="flex flex-col gap-2.5 text-sm text-text-dim">
               <li><Link href="/data-privacy" className="hover:text-text-muted transition-colors">Data Ownership &amp; Privacy</Link></li>
               <li><Link href="/privacy" className="hover:text-text-muted transition-colors">Privacy Policy</Link></li>
@@ -59,8 +59,8 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.04] flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="text-xs text-text-dim/50">© {new Date().getFullYear()} TypeGone. All rights reserved.</span>
-          <div className="flex items-center gap-4 text-xs text-text-dim/50">
+          <span className="text-xs text-text-dim">© {new Date().getFullYear()} TypeGone. All rights reserved.</span>
+          <div className="flex items-center gap-4 text-xs text-text-dim">
             <span>Made for people who think faster than they type.</span>
           </div>
         </div>

@@ -21,7 +21,6 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
           setTimeout(() => {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
-            el.style.filter = 'blur(0)';
           }, delay);
           observer.unobserve(el);
         }
@@ -40,8 +39,7 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
       style={{
         opacity: 0,
         transform: 'translateY(40px)',
-        filter: 'blur(6px)',
-        transition: 'opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1), filter 0.9s cubic-bezier(0.16,1,0.3,1)',
+        transition: 'opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)',
       }}
     >
       {children}

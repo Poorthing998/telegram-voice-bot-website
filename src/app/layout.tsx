@@ -7,6 +7,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackgroundAtmosphere from '@/components/BackgroundAtmosphere';
 import CookieBanner from '@/components/CookieBanner';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, generateOrganizationSchema, generateSoftwareAppSchema } from '@/lib/seo';
 
 // ═══ FONTS — loaded optimally by Next.js ═══
@@ -142,6 +144,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="relative z-10">{children}</main>
         <Footer />
         <CookieBanner />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

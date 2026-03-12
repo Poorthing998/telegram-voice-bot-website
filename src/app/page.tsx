@@ -791,6 +791,28 @@ export default function Home() {
         </section>
       </ScrollReveal>
 
+      {/* ═══ FROM THE FOUNDER ═══ */}
+      <ScrollReveal>
+        <section className="max-w-6xl mx-auto px-6 mt-32">
+          <div className="card p-8 md:p-12 relative overflow-hidden">
+            <div className="relative z-10">
+              <div className="section-line mb-6" />
+              <p className="text-xs font-semibold uppercase tracking-widest text-mint/60 mb-3">From the Founder</p>
+              <p className="font-display font-bold text-xl md:text-2xl mb-4 leading-snug max-w-2xl">
+                How I built TypeGone in 30 days after work — for $20.
+              </p>
+              <p className="text-text-muted text-sm leading-relaxed max-w-xl mb-6">
+                No CS degree. No co-founder. No venture money. Just nights, weekends, and $20 a month in tools.
+              </p>
+              <Link href="/blog/how-i-built-an-app-without-coding" className="inline-flex items-center gap-2 text-sm text-mint/70 hover:text-mint transition-colors font-medium underline underline-offset-4">
+                Read the story →
+              </Link>
+            </div>
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[300px] h-[300px] bg-mint/[0.03] rounded-full blur-[100px] pointer-events-none" />
+          </div>
+        </section>
+      </ScrollReveal>
+
       {/* ═══ FAQ ═══ */}
       <ScrollReveal className="mt-32">
         <FAQSection faqs={HOMEPAGE_FAQS} />

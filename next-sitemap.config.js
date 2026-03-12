@@ -36,6 +36,24 @@ module.exports = {
       };
     }
 
+    if (path === '/blog') {
+      return {
+        loc: path,
+        changefreq: 'weekly',
+        priority: 0.8,
+        lastmod,
+      };
+    }
+
+    if (path.startsWith('/blog/')) {
+      return {
+        loc: path,
+        changefreq: 'monthly',
+        priority: 0.7,
+        lastmod,
+      };
+    }
+
     if (['/privacy', '/terms', '/data-privacy'].includes(path)) {
       return {
         loc: path,

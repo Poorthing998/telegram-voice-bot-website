@@ -50,6 +50,7 @@ export default function Footer() {
           <div>
             <p className="font-display font-bold text-xs uppercase tracking-wider text-text-muted mb-4">Trust &amp; Legal</p>
             <ul className="flex flex-col gap-2.5 text-sm text-text-dim">
+              <li><Link href="/blog" className="hover:text-text-muted transition-colors">Blog</Link></li>
               <li><Link href="/data-privacy" className="hover:text-text-muted transition-colors">Data Ownership &amp; Privacy</Link></li>
               <li><Link href="/privacy" className="hover:text-text-muted transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-text-muted transition-colors">Terms of Service</Link></li>

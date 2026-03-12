@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       'I built a Telegram bot, desktop app, and Android keyboard in 30 days with no CS degree. Here\'s how I did it after work, using $20/month in tools.',
     siteName: 'TypeGone',
-    publishedTime: '2025-03-01T00:00:00.000Z',
+    publishedTime: '2026-03-12T00:00:00.000Z',
     authors: ['Ben'],
     images: [{ url: '/blog/hero-how-i-built.jpg', width: 1200, height: 675, alt: 'Developer coding late at night' }],
   },
@@ -57,7 +57,7 @@ const articleSchema = {
   description:
     "I built a Telegram bot, a desktop app, and an Android keyboard in 30 days. No CS degree. No co-founder. No venture money. Just nights, weekends, and $20 a month in tools.",
   url: `${SITE_URL}/blog/how-i-built-an-app-without-coding`,
-  datePublished: '2025-03-01T00:00:00.000Z',
+  datePublished: '2026-03-12T00:00:00.000Z',
   author: {
     '@type': 'Person',
     name: 'Ben',
@@ -169,7 +169,7 @@ export default function HowIBuiltPage() {
         <div className="flex items-center gap-4 text-sm text-text-dim pb-10 border-b border-white/[0.06]">
           <span>By <span className="text-text-muted font-medium">Ben</span></span>
           <span>·</span>
-          <span>March 2025</span>
+          <span>March 12, 2026</span>
           <span>·</span>
           <span>8 min read</span>
         </div>

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import ScrollReveal from '@/components/ScrollReveal';
 import JsonLd from '@/components/JsonLd';
 import { generateBreadcrumbSchema, SITE_URL } from '@/lib/seo';
@@ -38,12 +39,14 @@ export const metadata: Metadata = {
     siteName: 'TypeGone',
     publishedTime: '2025-03-01T00:00:00.000Z',
     authors: ['Ben'],
+    images: [{ url: '/blog/hero-how-i-built.jpg', width: 1200, height: 675, alt: 'Developer coding late at night' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How I Built an App Without Coding — After Work, for $20',
     description:
       'I built a Telegram bot, desktop app, and Android keyboard in 30 days with no CS degree. Here\'s how I did it after work, using $20/month in tools.',
+    images: ['/blog/hero-how-i-built.jpg'],
   },
 };
 
@@ -171,6 +174,20 @@ export default function HowIBuiltPage() {
           <span>8 min read</span>
         </div>
       </section>
+
+      {/* Hero image */}
+      <div className="max-w-3xl mx-auto px-6 mb-12">
+        <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+          <Image
+            src="/blog/hero-how-i-built.jpg"
+            alt="Developer coding late at night — building TypeGone after work"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
+      </div>
 
       {/* Article body */}
       <article className="max-w-3xl mx-auto px-6 pb-24">

@@ -32,7 +32,12 @@ const nextConfig = {
   // Performance
   images: {
     formats: ['image/avif', 'image/webp'],
-    domains: ['typegone.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'typegone.com',
+      },
+    ],
   },
 };
 
